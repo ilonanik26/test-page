@@ -1,0 +1,134 @@
+/* Yleinen tyyli */
+body {
+    background: linear-gradient(to bottom, #ffccdc, #ff99cc);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Keskitetty laatikko */
+#container {
+    background-color: #fff0f6;
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    animation: fadeIn 1.5s ease;
+}
+
+/* Otsikot */
+#otsikko {
+    color: #ff1493;
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    animation: slideDown 1s ease;
+}
+
+.alaotsikko {
+    color: #e60073;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-left: 6px solid #ff66b2;
+    padding-left: 10px;
+    animation: slideRight 1s ease;
+}
+
+/* Yksittäinen kortti */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    border-radius: 12px;
+    background-color: #fff0f6;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #4d004d;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+}
+
+/* Tekstit */
+p {
+    color: #4d004d;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Karuselli ilman JS: skrollattava flex */
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 15px;
+    scroll-behavior: smooth;
+    background-color: #ffe6f2;
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.carousel img {
+    height: 200px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #ff66b2;
+}
+
+.carousel img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+}
+
+/* Animaatiot */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
